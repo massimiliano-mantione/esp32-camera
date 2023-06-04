@@ -19,7 +19,7 @@ const camera_sensor_info_t camera_sensor[CAMERA_MODEL_MAX] = {
     {CAMERA_SC031GS, "SC031GS", SC031GS_SCCB_ADDR, SC031GS_PID, FRAMESIZE_VGA, false},
 };
 
-const resolution_info_t resolution[FRAMESIZE_INVALID] = {
+const resolution_info_t resolutions_list[FRAMESIZE_INVALID] = {
     {   96,   96, ASPECT_RATIO_1X1   }, /* 96x96 */
     {  160,  120, ASPECT_RATIO_4X3   }, /* QQVGA */
     {  176,  144, ASPECT_RATIO_5X4   }, /* QCIF  */

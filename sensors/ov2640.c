@@ -211,9 +211,9 @@ static int set_window(sensor_t *sensor, ov2640_sensor_mode_t mode, int offset_x,
 static int set_framesize(sensor_t *sensor, framesize_t framesize)
 {
     int ret = 0;
-    uint16_t w = resolution[framesize].width;
-    uint16_t h = resolution[framesize].height;
-    aspect_ratio_t ratio = resolution[framesize].aspect_ratio;
+    uint16_t w = resolutions_list[framesize].width;
+    uint16_t h = resolutions_list[framesize].height;
+    aspect_ratio_t ratio = resolutions_list[framesize].aspect_ratio;
     uint16_t max_x = ratio_table[ratio].max_x;
     uint16_t max_y = ratio_table[ratio].max_y;
     uint16_t offset_x = ratio_table[ratio].offset_x;

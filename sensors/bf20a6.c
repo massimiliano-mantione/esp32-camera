@@ -180,8 +180,8 @@ static int set_framesize(sensor_t *sensor, framesize_t framesize)
     if (framesize > FRAMESIZE_VGA) {
         return -1;
     }
-    uint16_t w = resolution[framesize].width;
-    uint16_t h = resolution[framesize].height;
+    uint16_t w = resolutions_list[framesize].width;
+    uint16_t h = resolutions_list[framesize].height;
 
     sensor->status.framesize = framesize;
 

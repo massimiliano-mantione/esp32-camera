@@ -318,9 +318,9 @@ static int set_framesize(sensor_t *sensor, framesize_t framesize)
     }
     framesize_t old_framesize = sensor->status.framesize;
     sensor->status.framesize = framesize;
-    uint16_t w = resolution[framesize].width;
-    uint16_t h = resolution[framesize].height;
-    aspect_ratio_t ratio = resolution[sensor->status.framesize].aspect_ratio;
+    uint16_t w = resolutions_list[framesize].width;
+    uint16_t h = resolutions_list[framesize].height;
+    aspect_ratio_t ratio = resolutions_list[sensor->status.framesize].aspect_ratio;
     ratio_settings_t settings = ratio_table[ratio];
 
     sensor->status.binning = (w <= (settings.max_width / 2) && h <= (settings.max_height / 2));
